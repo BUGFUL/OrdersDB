@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<configuration scan="true">
+
+    <appender name="Console" class="ch.qos.logback.core.ConsoleAppender">
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <Pattern>
+                %black(%d{ISO8601}) %highlight(%-5level) [%blue(%t)] %green(%C{1.}): %msg%n%throwable
+            </Pattern>
+        </layout>
+    </appender>
+
+<!--    <appender name="H2Appender" class="ch.qos.logback.core.ConsoleAppender"></appender>-->
+
+    <root level="info">
+        <appender-ref ref="Console" />
+<!--        <appender-ref ref="H2Appender"/>-->
+    </root>
+
+<!--    <logger name="com.downstreams.amqp" level="trace" additivity="false">-->
+<!--        <appender-ref ref="Console" />-->
+<!--    </logger>-->
+
+</configuration>
